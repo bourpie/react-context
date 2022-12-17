@@ -1,6 +1,7 @@
 import  { useContext }  from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
 import { AuthContext } from '../contexts/AuthContext'
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const themeContext = useContext(ThemeContext);
@@ -16,7 +17,7 @@ function Navbar() {
         {`${isAuthenticated ? "Logged in" : "Logged out"}`}
         </div>
         <ul>
-            <li>Home</li>
+            <li><Link to="/">Home</Link></li>
             <li>About</li>
             <li>Contact</li>
         </ul>
