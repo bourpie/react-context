@@ -4,11 +4,8 @@ import { AuthContext } from '../contexts/AuthContext'
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const themeContext = useContext(ThemeContext);
-  const authContext = useContext(AuthContext);
-  const { isLightTheme, light, dark } = themeContext;
-  const { isAuthenticated, toggleAuth } = authContext
-
+  const { isLightTheme, light, dark } = useContext(ThemeContext);
+  const { isAuthenticated, toggleAuth } = useContext(AuthContext);
   const theme = isLightTheme ? light : dark;
   return (
     <nav style={{background: theme.ui, color: theme.syntax}}>

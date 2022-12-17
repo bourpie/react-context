@@ -8,6 +8,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import SongList from './components/SongList'
+import BookListApp from './pages/BookListApp'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
   {
     path: "/books",
     element: <Books />
+  },
+  {
+    path: "/songs",
+    element: <SongList />
+  },
+  {
+    path: "/bookapp",
+    element: <BookListApp />
   }
 ]);
 
